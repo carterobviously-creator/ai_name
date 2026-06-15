@@ -1,0 +1,15 @@
+from python import as py
+create_file {
+/bash/git.lfs
+}
+/: this creates the lfs file for git for python,npm,xet
+edit_file -all {
+/bash/git.lfs -all set [
+!pip import namebrosa as name
+]
+}
+py --code [
+name.gen --openai.prompt = {ai_prompt}
+# ai_prompt is the output from /package/namegen.sb3 as a package
+]
+/: x! - stop e/o
